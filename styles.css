@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.panel {
+    flex: 0.5;
+    margin: 10px;
+    height: 80vh;
+    cursor: pointer;
+    transition: all 1000ms ease-in;
+    border-radius: 10px;
+    position: relative;
+}
+.panel h3 {
+    font-size: medium;
+    left: 10px;
+    bottom: 20px;
+    margin: 0;
+    opacity: 0; 
+    color: white;
+    position: absolute;
+}
+.panel.active {
+    flex: 5;
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
